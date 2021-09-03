@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS设计网页样式</title>
+        <!--
+            也可以链接到外部样式表来使用CSS，这里我们本地没有，等我学了CSS再自己写一个
+            <link rel="stylesheet" type="text/css" href="style.css">
+        -->
+        <!--在头部设置相应元素的style，构成内部样式表，可以指定元素的默认样式-->
+        <style type="text/css">
+        h1 {color: red;}
+        p {color: aqua;}
+        </style>
+    </head>
+
+    <!--可以对页面的body和期内子元素，指定背景色等-->
+    <body style="background-color: yellow;">
+        <h1>这是一个标题</h1>
+        <p>这是一个段落</p>
+        <p style="background-color: blueviolet;">
+
+        <!--可以对单个元素使用内敛样式，会比头部定义优先-->
+        <p style="color: blue;margin-left:20px;">调整后的段落</p>
+
+        <a href="//www,runoob.com/" style="text-decoration:none;">访问 runoob.com!</a>
+        
+        <h1 style="font-family: 'Times New Roman', Times, serif;">字体相关的用&lt;font&gt;组属性来设置</h1>
+
+        <p style="text-align: center;">文本对齐等由&lt;text&gt;来完成</p>
+
+    </body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+
+    <!--事实上没有这些图片,但是插入方式不受图片格式影响-->
+    <p>一个来自文件夹中的图像:</p>
+    <img src="/images/chrome.gif" alt="Google Chrome" width="33" height="32">
+    <p>一个来自菜鸟教程的图像:</p>
+    <img src="//www.runoob.com/images/logo.png" alt="runoob.com" width="336" height="69">
+
+    <h1 style="background-color: aqua;">相关介绍</h1>
+    <pre>
+        在HTML中图像由&lt;img&gt;标签定义，它是个空标签，只包含属性且没有闭合标签
+        需要源属性(src)来指定URL地址
+        其相应语法为
+        <div class="code"><div>
+        &lt;img src="<i>url</i>" alt="<i>some_text</i>"&gt;
+        </div></div>
+        
+        alt属性用为图像定义一串预备的可替换的文本
+        当浏览器无法载入图像时会呈现该文本，提示失去的信息
+        <div class="code"><div>
+            &lt;img src="boat.gif" alt="Nice Boat"&gt;
+        </div></div>
+
+        指定宽高用 width 和 height
+        <img src="/home/mikyi/图片/picf.jpg" border="3" alt="Nice Boat" width="228" height="304">
+        <div class="code"><div>
+            &lt;img src="/home/mikyi/图片/picf.jpg" alt="Nice Boat" width="304" height="228"&gt;
+        </div></div>
+
+        border属性给出一个<q>数值</q>，在图片上加上边框
+
+        以及给图片不同的位置给出不同的链接。<del>暂时懒得搞</del>
+        在&lt;img&gt;标签内先添加usemap然后自行编辑&lt;map&gt;和内部的&lt;area&gt;
+    </pre>
+
+</body>
+
+</html>

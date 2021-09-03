@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+</head>
+<body>
+
+<h1 style="color: aqua;">接受输入的表单</h1>
+<p>先用 form 包围，其内接受输入的部分用 input 标签设置 type 属性和 name 属性</p>
+<form action="">
+First name: <input type="text" name="firstname"><br>
+Last name: <input type="text" name="lastname"><br/>
+Username: <input type="text" name="user"><br/>
+Password: <input type="password" name="password">
+</form>
+
+<p><b>注意：</b> 表单本身是不可见的。并且注意一个文本字段的默认宽度是20个字符。</p>
+<p><b>注意：</b> 密码字段中的字符是隐藏的（显示为点点或星号）</p><br/>
+
+<h1 style="color:aqua;">执行选择的表单</h1>
+<from>
+<input type="radio" name="sex" value="male">Male<br/>
+<input type="radio" name="sex" value="female">Female
+</from>
+<p>执行单选的表单用 radio 作为 type 即可</p><br/>
+<form>
+<input type="checkbox" name="vehicle" value="Bike">I have a bike<br/>
+<input type="checkbox" name="vehicle" value="Car">I have a car
+</form>
+<p>复选表单用 checkbox 作为 type 即可</p><br/>
+<h1 style="color: aqua;">提交并转到按钮</h1>
+<form name="input" action="html_form_action.php" method="get">
+Username: <input type="text" name="user">
+<input type="submit" value="Submit">
+</form>
+<p>单击确认按钮时表单的内容会被传送到另一个文件</p>
+<p>表单的 action 属性定义了目的文件的文件名，相当与把值传进去执行</p><br/>
+
+<h1 style="color: aqua;">下拉表单</h1>
+<form action="">
+<select name="cars">
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="fiat" selected>Fiat</option>
+<option value="audi">Audi</option>
+</select>
+</form>
+<p>在表单内用 select 包裹然后添加 option 包裹给出相应的选择，可以添加预选值</p>
+<br/>
+<h1 style="color: aqua;">文本域，不同于表单</h1>
+<textarea rows="10" cols="30">
+我是一个文本框。这是预设的内容
+</textarea>
+<br/>
+<h1 style="color: aqua;">普通按钮，配合链接等行为</h1>
+<form action="">
+<input type="button" value="Hello world!">
+</form>
+<br/>
+<h1 style="color: aqua;">下面是一些用上其他内部标签的实例，查看源码即可</h1>
+<form action="">
+<fieldset>
+<legend>Personal information:</legend>
+Name: <input type="text" size="30"><br>
+E-mail: <input type="text" size="30"><br>
+Date of birth: <input type="text" size="10">
+</fieldset>
+</form>
+<br/>
+<h3>发送邮件到 someone@example.com:</h3>
+
+<form action="MAILTO:someone@example.com" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name" value="your name"><br>
+E-mail:<br>
+<input type="text" name="mail" value="your email"><br>
+Comment:<br>
+<input type="text" name="comment" value="your comment" size="50"><br><br>
+<input type="submit" value="发送">
+<input type="reset" value="重置">
+</form>
+<br/>
+<h1 style="color: aqua;">HTML5新标签</h1>
+<table border="1" name="子标签">
+<tr>
+    <th width="100">标签</th>
+    <th width="360">描述</th>
+</tr>
+<tr>
+    <td>&lt;label&gt;</td>
+    <td>定义了&lt;input&gt;元素的标签，一般为输入标题</td>
+</tr>
+<tr>
+    <td>&lt;fieldset&gt;</td>
+    <td>定义了一组相关的表单元素，并使用外框包含起来</td>
+</tr>
+<tr>
+    <td>&lt;legend&gt;</td>
+    <td>定义了&lt;fieldset&gt;元素的标题</td>
+</tr>
+<tr>
+    <td>&lt;optgroup&gt;</td>
+    <td>定义了选项组</td>
+</tr>
+<tr>
+    <td>&lt;datalist&gt;</td>
+    <td>指定一个预先定义的输入控件选项列表</td>
+</tr>
+<tr>
+    <td>&lt;keygen&gt;</td>
+    <td>定义了表单的密钥对生成器字段</td>
+</tr>
+<tr>
+    <td>&lt;output&gt;</td>
+    <td>定义一个计算结果</td>
+</tr>
+</table>
+
+</body>
+</html>

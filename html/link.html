@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>创建链接等</title>
+    </head>
+    <body>
+        <h1>链接到其他网址</h1>
+        <p>
+            <pre>
+                <a href="https://www.runoob.com/">这里也可以插入其他元素用于链接，注意在地址末加上斜杠</a>
+                <a href="https://www.runoob.com/" target="_blank" rel="noopener noreferrer">target属性可以定义被链接的文档在何处显示</a>
+                <a id="tips">这里是一个带id属性的位置，可以由其他地方链接过来，本页内只需要href="#tips"，其他页则加在文件名的末尾</a>
+            </pre>
+        </p>
+        <hr/>
+        <h1>头部head的性质</h1>
+        <p>
+            &lt;head&gt;元素包含了所有的头部标签元素，其中可以插入脚本(scripts)，样式文件(CSS)，及各种meta信息
+            可添加在头部区域中的元素标签为：&lt;title&gt;,&lt;style&gt;,&lt;meta&gt;,&lt;link&gt;,&lt;script&gt;,&lt;noscript&gt;,&lt;base&gt;
+            &lt;title&gt;-定义了文档的标题，也是添加到收藏夹的标题和显示在搜索引擎结果页的标题
+            &lt;base&gt;-定义了所有链接的URL，值的是target的属性
+            &lt;link&gt;-定义了文档与外部资源之间的关系，通常用于链接到样式表：如下
+            &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;
+            &lt;style&gt;-定义了文档的样式文件引用地址，或者添加样式来渲染HTML文档
+            &lt;meta&gt;-提供了HTML文档的meta标记，描述了一些基本的元数据
+            为搜索引擎定义关键词：
+            &lt;meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript"&gt;
+            为网页定义描述内容：
+            &lt;meta name="description" content="免费 Web & 编程 教程"&gt;
+            定义网页作者
+            &lt;meta name="author" content="Runoob"&gt;
+            每30秒刷新当前页面：
+            &lt;meta http-equiv="refresh" content="30"&gt;
+            &lt;script&gt;用于加载脚本文件，如 JavaScript
+        </p>
+    </body>
+</html>

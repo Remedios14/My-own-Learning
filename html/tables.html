@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+
+<body>
+
+    <pre>
+        每个表格从一个 table 标签开始。内含如 border 、 cellpadding 、 cellspacing 属性
+        然后可选 caption 标签指定表的标题
+        
+        每个表格行从 tr 标签开始。
+        可以<del>在行或列</del> tr 标签内用 th 给出每列的表头，一般加粗
+        在 th 标签内 指定 rowspan 或者 colspan 属性给出<q>数值</q>可以透视表
+        
+        每个表格的数据从 td 标签开始。
+        
+
+        <p style="font-size: larger;"><i>标签属性</i></p>
+        不指定 border 或者给出 0 则没有边框
+        cellpadding 指定单元格内容与其边框之间的空白
+        cellspacing 增加单元格之间的距离
+    </pre>
+    <a href="https://www.runoob.com/html/html-tables.html/">详细再来回顾这里</a>
+    <table border="1">
+        <caption>其他属性</caption>
+        <tr>
+            <th>标签</th>
+            <th>描述</th>
+        </tr>
+        <tr>
+            <td>&lt;colgroup&gt;</td>
+            <td>定义表格列的组</td>
+        </tr>
+        <tr>
+            <td>&lt;col&gt;</td>
+            <td>定义用于表格列的属性</td>
+        </tr>
+        <tr>
+            <td>&lt;thread&gt;</td>
+            <td>定义表格的页眉</td>
+        </tr>
+        <tr>
+            <td>&lt;tbody&gt;</td>
+            <td>定义表格的主体</td>
+        </tr>
+        <tr>
+            <td>&lt;tfoot&gt;</td>
+            <td>定义表格的页脚</td>
+        </tr>
+    </table>
+
+
+
+    <h1 style="color: aqua;">表格内套表格，但是很丑</h1>
+    <table border="1">
+        <caption style="color: aqua;">真的很丑</caption>
+        <tr>
+            <td>
+                <p>这是一个段落</p>
+                <p>这是另一个段落</p>
+            </td>
+            <td>这个单元格包含一个表格:
+                <table border="1">
+                    <tr>
+                        <td>A</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>D</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>这个单元格包含一个列表
+                <ul>
+                    <li>apples</li>
+                    <li>bananas</li>
+                    <li>pineapples</li>
+                </ul>
+            </td>
+            <td>HELLO</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

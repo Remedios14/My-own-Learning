@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+</head> 
+<body>
+
+<p>一些旧的浏览器不支持 iframe。</p>
+<p>如果浏览器不支持 iframes 则不会显示。</p>
+
+<h1 style="color: aqua;">iframe 内部属性表</h1>
+<table>
+    <tr>
+        <th width="100">属性</th>
+        <th width="360">含义</th>
+    </tr>
+    <tr>
+        <td>src</td>
+        <td>填入URL链接，可以是本地的html文件</td>
+    </tr>
+    <tr>
+        <td>width/height</td>
+        <td>设置宽高，默认以像素为单位，也可改成按比例</td>
+    </tr>
+    <tr>
+        <td>frameborder</td>
+        <td>设置边框宽度，默认0无边框</td>
+    </tr>
+</table>
+<br/>
+<pre>
+    有一些网站不希望被嵌套，其头文件内有一选项
+        X-Frame-Options
+    他有三个可配置的值
+    <div>
+        DENY：表示该网站页面不允许被嵌套，即使是在自己的域名的页面中也不能进行嵌套
+        SAMEORIGIN：表示该页面可以在相同域名页面中被嵌套展示。
+        ALLOW-FROM url：表示该页面可以在指定来源页面中进行嵌套展示。
+    </div>
+</pre>
+<iframe src="sheet_input.html" width="800" height="800"></iframe>
+
+</body>
+</html>
