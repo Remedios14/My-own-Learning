@@ -9,26 +9,28 @@
 <h1 style="color: aqua;">接受输入的表单</h1>
 <p>先用 form 包围，其内接受输入的部分用 input 标签设置 type 属性和 name 属性</p>
 <form action="">
-First name: <input type="text" name="firstname"><br>
-Last name: <input type="text" name="lastname"><br/>
-Username: <input type="text" name="user"><br/>
+First name: <input type="text" name="firstname" value="姓"><br>
+Last name: <input type="text" name="lastname" value="名字"><br/>
+Username: <input type="text" name="user" value="用户名"><br/>
 Password: <input type="password" name="password">
 </form>
 
 <p><b>注意：</b> 表单本身是不可见的。并且注意一个文本字段的默认宽度是20个字符。</p>
 <p><b>注意：</b> 密码字段中的字符是隐藏的（显示为点点或星号）</p><br/>
+<p><b>注意：</b> 通过 input 标签的 value 属性给出默认显示</p>
+<p><b>使用提示：</b> 一般可以配合 table 表格来格式化显示表单，展现较好的效果</p>
 
 <h1 style="color:aqua;">执行选择的表单</h1>
 <from>
 <input type="radio" name="sex" value="male">Male<br/>
 <input type="radio" name="sex" value="female">Female
 </from>
-<p>执行单选的表单用 radio 作为 type 即可</p><br/>
+<p>执行单选的表单用 radio 作为 type 即可，通过 name 属性设置相同值表明属于同一组选项</p><br/>
 <form>
 <input type="checkbox" name="vehicle" value="Bike">I have a bike<br/>
 <input type="checkbox" name="vehicle" value="Car">I have a car
 </form>
-<p>复选表单用 checkbox 作为 type 即可</p><br/>
+<p>复选表单用 checkbox 作为 type 即可，再在 checked 属性内给出 <q>checked</q> 值表示默认选中</p><br/>
 <h1 style="color: aqua;">提交并转到按钮</h1>
 <form name="input" action="html_form_action.php" method="get">
 Username: <input type="text" name="user">
@@ -46,7 +48,7 @@ Username: <input type="text" name="user">
 <option value="audi">Audi</option>
 </select>
 </form>
-<p>在表单内用 select 包裹然后添加 option 包裹给出相应的选择，可以添加预选值</p>
+<p>在表单内用 select 包裹然后添加 option 包裹给出相应的选择，可以添加预选值， selected="selected" 是规范写法</p>
 <br/>
 <h1 style="color: aqua;">文本域，不同于表单</h1>
 <textarea rows="10" cols="30">
@@ -56,6 +58,10 @@ Username: <input type="text" name="user">
 <h1 style="color: aqua;">普通按钮，配合链接等行为</h1>
 <form action="">
 <input type="button" value="Hello world!">
+<input type="reset" value="重置到默认输入">
+<input type="submit" value="提交内容">
+<input type="file" value="文件上传区域">
+<input type="hidden" value="隐藏区域"><!--当我们要发送某些信息但是不希望用户看见则可使用隐藏域-->
 </form>
 <br/>
 <h1 style="color: aqua;">下面是一些用上其他内部标签的实例，查看源码即可</h1>
@@ -116,6 +122,69 @@ Comment:<br>
     <td>定义一个计算结果</td>
 </tr>
 </table>
+
+<form action="http://localhost:1998" method="GET">
+    <h1 style="color: aqua;size: 4;">下面用表格格式展示表单的标签属性</h1>
+<input type="hidden" name="action" value="login"/>
+<table>
+    <tr>
+        <td>action</td>
+        <td>
+            <input name="action" type="text" value="action 属性设置提交的服务器地址">
+        </td>
+    </tr>
+    <tr>
+        <td>method</td>
+        <td>
+            <input name="method" type="text" value="method 属性设置提交的方式GET(默认值)或POST"
+        </td>
+    </tr>
+    <tr>
+        <td>
+            单选内容：
+        </td>
+        <td>
+            <input type="radio" name="pick" value="boy">男
+            <input type="radio" name="pick" value="girl">女
+        </td>
+    </tr>
+    <tr>
+        <td>复选内容：</td>
+        <td>
+            <input type="checkbox" name="check" value="Java">Java
+            <input type="checkbox" name="check" value="Python">Python
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="reset" value="重置">
+        </td>
+        <td>
+            <input type="submit" value="提交">
+        </td>
+    </tr>
+</table>
+</form>
+<pre>
+关于提交内容的说明:
+    表单提交的时候，数据没有正确地发送给服务器的三种情况：
+        1、表单项没有 name 属性 —— 加上后传送数据为 filled_name=input_val
+        2、单选、复选（下拉列表中的option标签）都需要添加 value 属性，以便在被选中时发送给服务器
+        3、表单项不在提交的 form 标签内部
+
+    GET 请求的特点是：
+        1、转向页面上，浏览器地址栏中的地址是：action 属性的值[+?+请求参数]
+            请求参数的格式是： name=input_val&name=input_val
+        2、不安全，会在地址中显示
+        3、有数据长度的限制（好像是100个字符，反正不用这个就对了）
+    
+    POST 请求的特点：
+        1、浏览器地址栏中只有 action 属性值
+        2、相对于 GET 请求安全
+        3、理论上没有数据长度的限制
+    
+    
+</pre>
 
 </body>
 </html>

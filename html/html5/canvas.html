@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+</head>
+<body>
+
+<p>矩形填充，可以调整其他颜色和形状</p>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+您的浏览器不支持 HTML5 canvas 标签。
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.fillStyle="#FF0000";
+ctx.fillRect(0,0,150,75);
+
+</script>
+
+<p>用 canvas 标签创建一个画布，构成一个二维网格，左上角坐标为(0,0)</p>
+<p>注意定义 id 属性，然后再用 script 来在画布上绘制才能有结果</p>
+<br/>
+<p>划直线，可以绘制多条线</p>
+<canvas id="myCanvas1" width="200" height="100" style="border:1px solid #d3d3d3;">
+您的浏览器不支持 HTML5 canvas 标签。</canvas>
+    
+<script>
+    
+var c=document.getElementById("myCanvas1");
+var ctx=c.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(200,100);
+ctx.stroke();
+
+</script>
+<p>画圆，需要相应函数支持</p>
+<canvas id="myCanvas2" width="200" height="100" style="border:1px solid #d3d3d3;">
+您的浏览器不支持 HTML5 canvas 标签。</canvas>
+    
+<script>
+    
+var c=document.getElementById("myCanvas2");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+    
+</script>
+<p>绘制文本，可以选择字体及设置文本样式</p>
+<canvas id="myCanvas3" width="200" height="100" style="border:1px solid #d3d3d3;">
+    您的浏览器不支持 HTML5 canvas 标签。</canvas>
+    
+    <script>
+    
+    var c=document.getElementById("myCanvas3");
+    var ctx=c.getContext("2d");
+    ctx.font="30px Arial";
+    ctx.fillText("Hello World",10,50);
+    
+    </script>
+
+<canvas id="myCanvas4" width="200" height="100" style="border:1px solid #d3d3d3;">
+    您的浏览器不支持 HTML5 canvas 标签。</canvas>
+    
+    <script>
+    
+    var c=document.getElementById("myCanvas4");
+    var ctx=c.getContext("2d");
+    ctx.font="30px Arial";
+    ctx.strokeText("Hello World",10,50);
+    
+    </script>
+<p>设置渐变色，也可以给出渐变的方向，形状等</p>
+<canvas id="myCanvas6" width="200" height="100" style="border:1px solid #d3d3d3;">
+    您的浏览器不支持 HTML5 canvas 标签。</canvas>
+    
+    <script>
+    
+    var c=document.getElementById("myCanvas6");
+    var ctx=c.getContext("2d");
+    
+    // Create gradient
+    var grd=ctx.createLinearGradient(0,0,200,0);
+    grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+    
+    // Fill with gradient
+    ctx.fillStyle=grd;
+    ctx.fillRect(10,10,150,80);
+    
+    </script>
+
+<canvas id="myCanvas7" width="200" height="100" style="border:1px solid #d3d3d3;">
+    您的浏览器不支持 HTML5 canvas 标签。</canvas>
+    
+    <script>
+    
+    var c=document.getElementById("myCanvas7");
+    var ctx=c.getContext("2d");
+    
+    // Create gradient
+    var grd=ctx.createRadialGradient(75,50,5,90,60,100);
+    grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+    
+    // Fill with gradient
+    ctx.fillStyle=grd;
+    ctx.fillRect(10,10,150,80);
+    
+    </script>
+
+<p>添加图片<br/>Image to use:</p>
+<img id="scream" src="/home/mikyi/图片/pict.jpg" alt="The Scream" width="220" height="277"><p>Canvas:</p>
+<canvas id="myCanvas8" width="250" height="300" style="border:1px solid #d3d3d3;">
+您的浏览器不支持 HTML5 canvas 标签。</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas8");
+var ctx=c.getContext("2d");
+var img=document.getElementById("scream");
+
+img.onload = function() {
+	ctx.drawImage(img,10,10);
+} 
+</script>
+
+</body>
+</html>

@@ -27,6 +27,10 @@
         <td>frameborder</td>
         <td>设置边框宽度，默认0无边框</td>
     </tr>
+    <tr>
+        <td>name</td>
+        <td>命名后可以在链接中指定 target 使得在子界面转到 url</td>
+    </tr>
 </table>
 <br/>
 <pre>
@@ -39,7 +43,9 @@
         ALLOW-FROM url：表示该页面可以在指定来源页面中进行嵌套展示。
     </div>
 </pre>
-<iframe src="sheet_input.html" width="800" height="800"></iframe>
+<iframe src="sheet_input.html" width="800" height="800" name="childframe"></iframe>
+
+<a href="script.html" target="childframe">在子界面转到</a>
 
 </body>
 </html>
