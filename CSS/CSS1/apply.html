@@ -25,14 +25,19 @@
         #id_val{
             property:"val";
         }
-        作用于页面内所有与该 id_val 具有相同 id 值的 tag
+        作用于页面内所有与该 id_val 具有相同 id 值的 tag，注意不要以数字开头做 id_val
         <b>注意：用<q>#</q>开头；其作用优先级比标签选择器更高</b><br/>
         id 是全局唯一的，相当于身份证明，只能给到一个 tag
     3. class 类型选择器：
         .class_val{
             property:"val";
         }
-        class 可以重复赋值为一个类，作用的优先级会低于 id (这不是应该的嘛)
+        class 可以重复赋值为一个类，作用的优先级会低于 id (这不是应该的嘛)，也注意不要数字开头
+        也可以指定特定的 HTML 元素使用 class：
+        p.class_val{
+            property:"val";
+        }
+        随后仅有 p 标签内给赋该 class_val 才会起作用，其他 tag 即使给赋这个 class_val 也无效
     4. 组合选择器：
         选择器1,选择器2,...,选择器n{
             property:val;
