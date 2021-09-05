@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS在HTML中的几种应用方法</title>
+    <link rel="stylesheet" type="text/css" href="style_test.css">
+</head>
+<body>
+<h3 style="border: 1px solid blue; color:crimson">应用方法</h3>
+<div>标题使用了最麻烦的方法，在单个 tag 内指定，无法复用且不方便后续阅读修改</div>
+<div>也可以在头部内用 style 标签体来定义一类 tag 通用的样式，注意给 type 属性赋值，然后在内部使用 CSS 的格式声明样式</div>
+<span>另一种头部声明了的样式</span><span>，注意在 style 块内部属于 CSS 格式，其注释方法为 <q>/* ... */</q> 以及其他私有格式</span>
+<p>但是在头部定义也只能应用到当前页面，最好的是写在通用的一个文件内然后引入，不懂为啥写在头部没生效，反正用外部 css 最好</p>
+<p>写完后在头部用 link 这一单标签指定 rel=<q>stylesheet</q> 和 type=<q>text/css</q> 和 href=<q>目录到文件</q> 即可指定样式</p>
+<span id="id001">来测试一下</span><br/>
+<span class="class01">这次测试类分组</span>
+<pre>
+下面需要知道选择器的格式：
+    1. 标签选择器：
+        tag{
+            property:"val";
+        }
+        作用于页面内所有的此标签
+    2. id 选择器：
+        #id_val{
+            property:"val";
+        }
+        作用于页面内所有与该 id_val 具有相同 id 值的 tag
+        <b>注意：用<q>#</q>开头；其作用优先级比标签选择器更高</b><br/>
+        id 是全局唯一的，相当于身份证明，只能给到一个 tag
+    3. class 类型选择器：
+        .class_val{
+            property:"val";
+        }
+        class 可以重复赋值为一个类，作用的优先级会低于 id (这不是应该的嘛)
+    4. 组合选择器：
+        选择器1,选择器2,...,选择器n{
+            property:val;
+        }
+        可以让多个选择器共用同一个 CSS 代码，相当与取并而非交
+        <b>注意用逗号<q>,</q>来分隔</b>
+</pre>
+<hr/>
+<h3 align="center" class="class01">常用的属性</h3>
+<table>
+    <tr>
+        <th align="center" width="200">属性</th><th align="center" width="500">作用</th>
+    </tr>
+    <tr>
+        <td>color</td><td>颜色，有多种表示形式，也可以手选</td>
+    </tr>
+    <tr>
+        <td>border</td><td>边界相关</td>
+    </tr>
+    <tr>
+        <td>height</td><td>高度</td>
+    </tr>
+    <tr>
+        <td>width</td><td>宽度(长度)</td>
+    </tr>
+    <tr>
+        <td>background-color</td><td>背景色，不太美，一般设背景图</td>
+    </tr>
+    <tr>
+        <td>font-size</td><td>字体大小，其实与字体有关都是 font-</td>
+    </tr>
+    <tr>
+        <td>margin-left</td><td>元素左边界，可以设为 auto</td>
+    </tr>
+    <tr>
+        <td>margin-right</td><td>元素右边界，也可设为 auto</td>
+    </tr>
+    <tr>
+        <td>text-align</td><td>内部文本对其情况</td>
+    </tr>
+    <tr>
+        <td>text-decoration</td><td>超链接的下划线，可改为 none</td>
+    </tr>
+</table>
+<ul>
+    <li>随便一个列表</li>
+</ul>
+
+</body>
+</html>

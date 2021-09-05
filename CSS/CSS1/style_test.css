@@ -1,0 +1,33 @@
+p{
+    color: cadetblue;
+    border:1px dashed pink;
+}
+div{
+    color: rgb(202, 27, 56);
+    border: 1px solid yellowgreen;
+}
+span{
+    color:blueviolet;
+    border: 1px solid palevioletred;
+}
+#id001{
+    color:darkmagenta;
+    border:1px dashed rgb(14, 201, 201);
+}
+.class01{
+    color:deeppink;
+    border:1px dotted rgb(19, 231, 47);
+}
+table{
+    border:1px pink solid;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+td{
+    border:1px lightgreen solid;
+}
+ul{
+    list-style: upper-alpha;
+}
