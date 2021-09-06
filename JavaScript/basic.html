@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hello JavaScript</title>
+    <script type="text/JavaScript">
+    // 在头部添加 脚本标签
+    alert("Hello JavaScript!");
+</script>
+<script type="text/JavaScript" src="hello.js"></script>
+<!--会顺序执行-->
+</head>
+<body>
+<pre>
+    JavaScript 中的变量类型：
+        <table>
+            <tr>
+                <td>数值类型</td><td>number</td><td>0 为 false</td>
+            </tr>
+            <tr>
+                <td>字符串类型</td><td>string</td><td>"" 空串为 false</td>
+            </tr>
+            <tr>
+                <td>对象类型</td><td>object</td><td>undefined、null 为 false</td>
+            </tr>
+            <tr>
+                <td>布尔类型</td><td>boolean</td><td>??</td>
+            </tr>
+            <tr>
+                <td>函数类型</td><td>function</td><td>??</td>
+            </tr>
+        </table>
+    
+    JavaScript 里特殊的<b style="color: red;">值</b>：
+        <table>
+            <tr>
+                <td>undefined</td><td>未定义，所有 js 变量未赋初始值时的值</td>
+            </tr>
+            <tr>
+                <td>null</td><td>空值</td>
+            </tr>
+            <tr>
+                <td>NAN</td><td>非数字，非数值</td>
+            </tr>
+        </table>
+    
+    JS 中的定义变量格式：
+        var 变量名;
+        var 变量名 = 值;
+</pre>
+<script>
+    var i;
+    // alert(i); // 返回 undefined
+    i = 11;
+    // typeof() 是 JS 直接提供的一个函数，返回变量的类型
+    i = "abc";
+
+    var a = 2;
+    var b = "abc";
+
+    alert( a * b); // 返回 NAN 因为不是数值
+
+    a = 12;
+    b = "12";
+
+    alert( a == b); // 返回 true 双等号仅数据相同即为 true
+    alert( a === b); // 返回 false 三等号需要值和数据类型都相同
+</script>
+<pre>
+    逻辑运算符：
+        && 且运算：
+            当表达式全为真时返回最后一个值
+            否则返回第一个为假的值—— null 之类的
+        || 或运算：
+            当表达式全为假时返回最后一个值
+            否则返回第一个为真的值
+        !  取反运算：
+</pre>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>数组</title>
+</head>
+<body>
+<pre>
+    数组的定义方式：
+        格式：
+        var 数组名 = [];   //空数组
+        var 数组名 = [1, "abc", true];  //填充数组
+    JS 语言中的数组在通过<b style="color: red;">下标赋值</b>时会自动扩容至最大的下标
+</pre>
+<script>
+
+    var arr = [];
+
+    alert(arr.length);
+
+    arr[0] = 11;
+
+    alert(arr.length);
+
+    arr[2] = "abc";
+
+    alert(arr.length);
+    // arr[1]自动为 undefined
+
+    // 数组的遍历
+    for (var i = 0; i < arr.length; i++) {
+        alert(arr[i]);
+    }
+
+</script>
+</body>
+</html>
