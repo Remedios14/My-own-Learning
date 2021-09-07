@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS 中的对象</title>
+</head>
+<body>
+<h1>Object 形式的自定义对象</h1>
+<pre>
+    对象的定义1：
+        var 变量名 = new Object();    // 对象实例（空对象）
+        变量名.属性名 = 值;            // 定义一个属性
+        变量名.函数名 = function(){};  // 定义一个函数
+        
+    对象的定义2：
+        var 变量名{
+            属性名 : 值,
+            属性名 : 值,
+            函数名 : function () {}
+        }
+        // 注意最后一条后不要加逗号
+
+    对象的访问：
+        变量名.属性 / 函数名();
+
+</pre>
+<script>
+
+    var obj = new Object();
+    obj.name = "mikyi";
+    obj.age = 16;
+    obj.fun = function() {
+        return obj.name + obj.age;
+    }
+
+    alert(obj.fun());
+
+</script>
+</body>
+</html>
