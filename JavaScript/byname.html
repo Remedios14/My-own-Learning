@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>getElementByName</title>
+<script>
+    function checkAll() {
+        /*  让所有复选框都选中
+            document.getElementByName(); 是根据指定的 name 属性
+            查询返回多个标签对象集合，构成一个数组，每个元素为 DOM 对象
+            这个数组中元素的顺序是他们在 html 页面中从上到下的顺序
+            ByTagName("input")效果类似
+        */
+        var hobbies = document.getElementsByName("hobby");
+        /*  复选框对象的 checked 属性表示其选中状态，选中为 true
+            checked 这个属性可读可写，直接修改即可       
+        */
+        for (var o = 0; i < hobbies.length; i++) {
+            hobbies[i].checked = true;
+        }
+    }
+
+    function checkNone() {
+        // 让所有复选框都不选中
+        var hobbies = document.getElementsByName("hobby");
+
+        for (var o = 0; i < hobbies.length; i++) {
+            hobbies[i].checked = false;
+        }
+    }
+
+    function checkReverse() {
+        // 让所有复选框都反选
+        var hobbies = document.getElementsByName("hobby");
+
+        for (var o = 0; i < hobbies.length; i++) {
+            hobbies[i].checked = !hobbies[i].checked;
+        }
+    }
+</script>
+
+<body>
+    兴许爱好：
+    <input type="checkbox" name="hobby" value="cpp">C++
+    <input type="checkbox" name="hobby" value="java">Java
+    <input type="checkbox" name="hobby" value="python">Python
+    <input type="checkbox" name="hobby" value="js">JavaScript
+    <input type="checkbox" name="hobby" value="shell">Shell
+    <input type="checkbox" name="hobby" value="go">Go
+    <br />
+    <button onclick="checkAll()">全选</button>
+    <button onclick="checkNone()">全不选</button>
+    <button onclick="checkReverse()">反选</button>
+</body>
+
+</html>
