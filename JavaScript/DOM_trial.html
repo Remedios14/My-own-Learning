@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>基本DOM对象的获取</title>
+<script>
+/*
+需求： 当用户点击了校验按钮，要获取输出框中的内容，然后验证其是否合法
+      验证的规则是：必须由字母，数字，下划线组成，并且长度是 5 到 12 位  
+*/
+    function onclickFun() {
+        var usernameObj = document.getElementById("username");
+        var usernameText = usernameObj.value;
+        // 正则字符串
+        var patt = /^\w{5,12}$/;
+        // test() 方法用于测试字符串是否匹配，返回布尔
+        var SpanObj = document.getElementById("usernameSpan");
+
+        if (patt.test(usernameText)) {
+            SpanObj.innerHTML = "用户名合法！";
+            // 或者存入 img 对象
+        } else {
+            SpanObj.innerHTML = "用户名非法！";
+        }
+    }
+</script>
+<body>
+    用户名：<input type="text" id="username" value="why">
+    <span id="usernameSpan" style="color: red;"></span>
+    <button onclick="onclickFun()">校验</button>
+</body>
+</html>

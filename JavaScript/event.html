@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <title> JS 中的事件</title>
-<script type="text/JavaScript" src="event.js">
-</script>
 </head>
 <body onload="alert('静态注册onload事件');">
+<p>发现动态注册不生效，网上解释为页面加载按照 html -> head -> body 顺序进行，未加载 body 时没有那些 id</p>
+<p>解决办法是把动态加载内容放到 body 后面 /html 前面</p>
     <button onclick="onclick_func()">静态按钮</button>
     <button id="btn01">动态按钮</button>
 <hr/>
@@ -30,7 +30,7 @@
     <form action="http://localhost:8080" id="submit01">
         <input type="submit" value="动态注册"/>
     </form>
-<pre id="pre01">
+<pre id="pre1">
     事件是电脑输入设备与页面进行交互的响应行为。
 
 <b>常用的事件</b>：
@@ -53,4 +53,6 @@
         2、标签对象.事件名 = function(){}
 </pre>
 </body>
+<script src="event.js">
+</script>
 </html>
