@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery 实现 CSS 操作</title>
+<style>
+    	
+	div{
+		width:100px;
+		height:260px;
+	}
+	
+	div.whiteborder{
+		border: 2px white solid;
+	}
+	
+	div.redDiv{
+		background-color: red;
+	}
+	
+	div.blueBorder{
+		border: 5px blue solid;
+	}
+	
+</style>
+<script src="jquery-3.5.1.js"></script>
+<script>
+    $(function () {
+
+        var $divEle = $("div:first");
+
+        $("#btn01").click(function () {
+            // addClass() - 向被选元素添加一个或多个类，可一次性添加多个
+            $divEle.addClass("redDiv blueBorder");
+        });
+
+        $("btn02").click(function () {
+            // removeClass() - 向被选元素删除一个或多个类
+            $divEle.removeClass("redDiv"); // 也可删除多个，当传入空时全部删除
+        });
+
+        $("btn03").click(function () {
+            // toggleClass() - 对被选元素进行添加/删除类的切换操作
+            $divEle.toggleClass("redDiv");
+        });
+
+        $("btn04").click(function () {
+            // offset() - 返回地一个匹配元素相对于文档的位置
+            var pos = $divEle.offset();
+            // console.log(pos);
+
+            // 可以传入键值对或对象进行设置
+            $divEle.offset({
+                top:100,
+                left:50
+            })
+        });
+    })
+</script>
+</head>
+<body>
+    <table align="center">
+		<tr>
+			<td>
+				<div class="border">
+				</div>
+			</td>
+			
+			<td>
+				<div class="btn">
+					<input type="button" value="addClass()" id="btn01"/>
+					<input type="button" value="removeClass()" id="btn02"/>
+					<input type="button" value="toggleClass()" id="btn03"/>
+					<input type="button" value="offset()" id="btn04"/>
+				</div>
+			</td>
+		</tr>
+	</table>
+	
+	
+	
+	<br /> <br />
+	
+	
+	<br /> <br />
+
+
+
+</body>
+</html>

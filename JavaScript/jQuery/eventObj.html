@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>事件对象的使用</title>
+<style>
+    body {
+        text-align: center;
+    }
+    #small {
+        margin-top: 150px;
+    }
+    #showBig {
+        position: absolute;
+        display: none;
+    }
+</style>
+<script src="jquery-3.5.1.js"></script>
+<script>
+    $(function () {
+        $("#small").bind("mouseover mouseout mousemove", function (event) {
+            if (event.type == "mouseover") {
+                $("#showBig").show();
+            } else if (event.type == "mouseout") {
+                $("#showBig").hide();
+            } else if (event.type == "mousemove") {
+                $("#showBig").offset({
+                    // 这里 +10 是避免移到 big 图片上判定为 mouseout
+                    left: event.pageX + 10,
+                    top: event.pageY + 10
+                });
+            }
+        });
+    });
+</script>
+</head>
+<body>
+
+    <img id="small" src="/home/mikyi/图片/picf.jpg" />
+
+    <div id="showBig">
+        <img src="/home/mikyi/图片/pico.jpg" />
+    </div>
+</body>
+</html>
