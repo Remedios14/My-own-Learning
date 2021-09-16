@@ -4,6 +4,8 @@
 
 管道命令，用 `|` 来分隔构成，后一条接受前一条的输出进行操作，但不能处理前一条的错误
 
+`$ ls -al /etc | less` 第一个命令可以只有 stdout ，但后续的管道命令必须有 stdin
+
 - [ps](https://www.runoob.com/linux/linux-comm-ps.html) (process status) - 用于显示当前进程的状态，类似于 windows 的任务管理器
   - `ps [options] [--help]`
   - -A 列出所有的进程
