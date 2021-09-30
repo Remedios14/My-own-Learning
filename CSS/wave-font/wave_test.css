@@ -1,0 +1,24 @@
+body {
+    /*先给定整体的背景色，然后用其它色来切割*/
+    background: #fff;
+    color: #000;
+}
+body::before, body::after {
+    content: "";
+    position:absolute;
+    border-radius: 45% 48% 43% 47%;
+    background: rgba(3, 169, 244, .85);
+    animation: rotate 10s infinite linear;
+}
+body::after {
+    border-radius: 43% 47% 44% 48%;
+    animation: rotate 10s infinite .5s linear;
+}
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
