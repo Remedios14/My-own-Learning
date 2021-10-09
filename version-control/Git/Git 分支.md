@@ -25,6 +25,9 @@ $ git branch [-v] [-vv] [--merged] [--no-merged] [-d] # 查看所有分支，显
 ```shell
 $ git ls-remote <remote> # 列出远程仓库的分支列表
 $ git push <remote> local-br[:br-name] # 推动本地的分支到远程仓库，可以指定远程仓库的分支
+
+$ git push <remote> --delete [br-name] # 删除远程仓库的指定分支，本地仍保留
+$ git fetch <remote> -p # 直接删除本地存在而远程不存在的分支
 ```
 
 ### 跟踪分支
@@ -65,5 +68,11 @@ $ git rebase --onto <main> <mid> <work>
 # 取出 work 分支，找出从 mid 分支分歧之后的补丁，把这些补丁应用到 main 分支上，使得 work 分支看起来像直接基于 main 修改一样
 $ git rebase <main> <work> # 无须检出直接 work 向 main 变基
 $ git rebase <remote>/<branch> # 向指定分支变基，当整体被打乱时可以补救一下
+$ git cherry-pick <commit-id> # 在当前分支上取出来自任意地方的一个提交并应用
 ```
 
+### 代码回滚
+
+```shell
+$ git reset --hard <commit-id / HEAD*> # 回退到制定提交版本，可以用 ^ 或 ~n 符号结合 HEAD 指针
+```

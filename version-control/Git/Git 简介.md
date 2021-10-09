@@ -50,3 +50,4 @@ $ git config --global user.email email_address@163.com
 $ git config --global core.editor __ # 需要指定可执行文件路径（Windows上）
 ```
 
+![files](../pic/git常用命令速查表.png)
