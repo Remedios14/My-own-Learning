@@ -13,7 +13,7 @@
 - 蒙特卡洛策略评估（模拟采样大量轨迹计算其返回值取平均）
 - Temporal Difference (TD) learning
 
-![](../../pictures/RL-MFPC-Concept.png)
+![](./pics/MFPC-Concept.png)
 
 智能体执行动作从环境中获得**序列化**的状态和奖励信息反馈
 

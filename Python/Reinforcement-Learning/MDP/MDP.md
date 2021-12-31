@@ -109,11 +109,11 @@ $$
 $$
 v^\pi(s)=\mathbb E_\pi[R_{t+1}+\gamma v^\pi(s_{t+1})|s_t=s]
 $$
-![](../../pictures/RL-MDP-Value.png)
+![](./pics/RL-MDP-Value.png)
 
 以及与动作 a 相关的 q 函数
 
-![](../../pictures/RL-MDP-Qfunction.png)
+![](./pics/RL-MDP-Qfunction.png)
 
 ### 问题模型
 
